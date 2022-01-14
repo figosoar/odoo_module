@@ -1,12 +1,14 @@
 from odoo import api, fields, models
 from odoo.exceptions import Warning
 
-class Page(models.Model):
+class Worker(models.Model):
     # properties
-    _name = 'waste.page'
-    _description = 'Waste'
+    _name = 'waste.worker'
+    _description = 'Worker'
     # String fields
-    name = fields.Char('Title', required=True)
+    name = fields.Char('Name', required=True)
+
+    '''
     process = fields.Char('生产工序')
     product_code = fields.Char('产品型号')
     material_type = fields.Selection(
@@ -14,7 +16,6 @@ class Page(models.Model):
         #[('paper', 'Paperback'), ('hard', 'Hardcover'), ('electronic', 'Electronic'), ('other', 'Other')], 'Type')
     contract = fields.Char('联系人')
     date_published = fields.Date()
-    '''
     notes = fields.Text('Internal Notes')
     descr = fields.Html('Description')
 

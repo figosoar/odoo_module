@@ -8,8 +8,9 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        'views/menu.xml',
         'views/actions.xml',
+        'views/menu.xml',
         'views/page_view.xml',
+        'views/worker_view.xml',
     ],
 }

@@ -1,5 +1,24 @@
 <?xml version="1.0"?>
 <odoo>
+
+    <record id="view_list_waste" model="ir.ui.view">
+	  <field name="name">Waste List</field>
+	  <field name="model">waste.page</field>
+	  <field name="arch" type="xml">
+		  <tree>
+				<field name="name"/>
+				<field name="product_code"/>
+				<field name="date_published"/>
+				<field name="material_type"/>
+				<!--field name="author_ids" widget="many2many_tags"/-->
+				<field name="process"/>
+				<field name="contract"/>
+				<!--field name="image" widget="image"/-->
+		  </tree>
+	  </field>
+	</record>
+
+
     <record id="view_form_waste" model="ir.ui.view">
 	  <field name="name">Waste Form</field>
 	  <field name="model">waste.page</field>
@@ -9,18 +28,21 @@
 				<group name="group_top">
 				  <group name="group_left">
 					<field name="name"/>
-					<!--field name="author_ids" widget="many2many_tags"/>
-					<field name="publisher_id"/>
-					<field name="date_published"/-->
+					<field name="product_code"/>
+					<field name="date_published"/>
+					<field name="material_type"/>
+					<!--field name="author_ids" widget="many2many_tags"/-->
 				  </group>
-				  <!--group name="group_right">
-					<field name="isbn"/>
-					<field name="active"/>
-					<field name="image" widget="image"/>
-				  </group-->
+				  <group name="group_right">
+					<field name="process"/>
+					<field name="contract"/>
+					<!--field name="image" widget="image"/-->
+				  </group>
 				</group>
 			</sheet>
 		  </form>
 	  </field>
 	</record>
+
+
 </odoo>

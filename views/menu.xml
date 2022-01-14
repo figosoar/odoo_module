@@ -1,19 +1,11 @@
 <?xml version="1.0"?>
 <odoo>
 	<data>
-	    <menuitem name="Waste" id="waste_menu_root"/>
+	    <menuitem name="WMM生产废料管理" id="waste_menu_root" sequence="1"/>
 
-		<!-- Menu item to open the Book list -->
-		<menuitem id="menu_waste_page"
-			name="Page"
-			parent="waste_menu_root"
-			action="action_waste_page"
-		/>
-		<!-- Action to open the Book list -->
-		<act_window id="action_waste_page"
-			name="Page"
-			res_model="waste.page"
-			view_mode="tree,form"
-		/>
+		<menuitem name="Page" id="menu_waste_page" parent="waste_menu_root"
+			action="action_waste_page" sequence="10"/>
+		<menuitem name="Worker" id="menu_waste_worker" parent="waste_menu_root"
+			action="action_waste_worker" sequence="15"/>
 	</data>
 </odoo>

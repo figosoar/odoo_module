@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="module_waste_page" model="ir.module.category">
+    <record id="module_waste_management" model="ir.module.category">
         <field name="name">Waste权限</field>
     </record>
 	<!-- Library User Group -->
 	<record id="waste_group_user" model="res.groups">
 		<field name="name">User</field>
-		<field name="category_id" ref="module_waste_page"/>
+		<field name="category_id" ref="module_waste_management"/>
 		<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
 	</record>
     <record id="waste_group_manager" model="res.groups">
         <field name="name">管理员</field>
-        <field name="category_id" ref="module_waste_page"/>
+        <field name="category_id" ref="module_waste_management"/>
         <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
         <field name="users" eval="[
                     (4, ref('base.user_root')),
