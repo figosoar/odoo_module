@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+	    <menuitem name="Waste" id="waste_menu_root"/>
+
+		<!-- Menu item to open the Book list -->
+		<menuitem id="menu_waste_page"
+			name="Page"
+			parent="waste_menu_root"
+			action="action_waste_page"
+		/>
+		<!-- Action to open the Book list -->
+		<act_window id="action_waste_page"
+			name="Page"
+			res_model="waste.page"
+			view_mode="tree,form"
+		/>
+	</data>
+</odoo>

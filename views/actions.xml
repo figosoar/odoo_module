@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+
+    <record model="ir.actions.act_window" id="action_waste_page">
+      <field name="name">废料表</field>
+      <field name="res_model">waste.page</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!--record id="btms_test_import_to_action" model="ir.actions.act_window">
+        <field name="name">导入测试工单</field>
+        <field name="res_model">btms.test.import.to</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">current</field>
+    </record-->
+
+
+
+  </data>
+</odoo>
